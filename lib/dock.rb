@@ -6,4 +6,8 @@ class Dock
     @max_rental_time = rental_hour_limit
     @rental_log = {}
   end
+
+  def rent(boat, renter)
+    @rental_log[boat] = renter
+  end
 end
