@@ -18,4 +18,10 @@ class DockTest < Minitest::Test
     assert_equal "The Rowing Dock", dock.name
     assert_equal 3, dock.max_rental_time
   end
+
+  def test_it_has_empty_rental_log
+    dock = Dock.new("The Rowing Dock", 3)
+
+    assert_equal ({}), dock.rental_log
+  end
 end
